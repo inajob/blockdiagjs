@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <script src="js/gin.js"></script>
+  <script src="js/blockdiag.js"></script>
+  <link rel="stylesheet" type="text/css" href="blockdiagjs.css" />
+
+</head>
+<body onload="init()">
+<h1>blockdiagjs</h1>
+
+<div>
+<a href="http://blockdiag.com/blockdiag-ja/build/html/index.html">blockdiag</a>に一目惚れしておもわずJSに移植を試みました。
+まだ未対応の機能や初歩的なバグ（typoとか）が散見されますが、そのうち何とかします。
+</div>
+
+<div>
+Chromeで動作を確認しています。 IEでは動きません。
+</div>
+
+<div class="footer">
+  <div>
+    <script>
+      <!--
+	//  document.write('<a href="http://b.hatena.ne.jp/entry/'+document.location.href+'" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></'+'script>');
+	//  document.write('<iframe src="http://www.facebook.com/plugins/like.php?href='+document.location.href+'&amp;layout=button_count&amp;show_faces=true&amp;width=120&amp;action=like&amp;font&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:20px;" allowTransparency="true"></iframe>');
+	-->
+    </script>
+  </div>
+
+  created by <a href="http://twitter.com/ina_ani">@ina_ani</a><br/>
+  blog <a href="http://d.hatena.ne.jp/inajob/">id:inajob</a>
+</div>
+
+<div id="log">
+  hogehoge
+</div>
+<div>
+<!--
+diagram a{
+  ねこねこ->もふもふ,ふもふも->ほげほげ->ふがふが->がうがう;
+  ふがふが->がうがう[folded]
+}
+  
+diagram a{
+ group{
+  A;C;
+ }
+ A->B->C;
+}
+
+-->
+  <textarea id="src">
+
+diagram {
+  group{
+   color="skyblue"
+   A [label = "foo"];
+   B [label = "bar"];
+  }
+  C [label = "baz"];
+
+  A -> B [label = "power up"];
+  B -> C [label = "power up"];
+  B -> A [label = "power down"];
+  B -> D[label = "miracle"];
+}
+  
+    
+  </textarea>
+</div>
+<div>
+<canvas id="canv" width="1600" height="800"></canvas>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* CSS */
+h1{
+    border:solid 1px;
+}
+textarea{
+    width:100%;
+    height:200px;
+}
+.footer{
+    text-align:right;
+}
